@@ -101,6 +101,7 @@ void checkSpout()
 		Serial.println("please");
 		if (isEnabled)
 		{
+			Serial.println("water");
 			openSpout();
 		}
 	}
@@ -112,7 +113,6 @@ void checkSpout()
 
 void openSpout()
 {
-	Serial.println("water");
 	digitalWrite(spout, HIGH);
 }
 
