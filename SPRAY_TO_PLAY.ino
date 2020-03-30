@@ -1,13 +1,13 @@
 /*
    SPRAY_TO_PALY
    
-   TODO: finish writing this
    A water spout that is operated by a button
    press. The button does not initially work. 
    Also connected is the carnival game where a
    person uses a water gun to apply pressure to 
-   a target. When one person plays the game and 
-   hits the target at least every 2 seconds 
+   a target. When a person plays the game and 
+   hits the target at least every 2 seconds,
+   the spout is enabled and can be used.  
    
    created 02/14/2020
    updated 03/30/20
