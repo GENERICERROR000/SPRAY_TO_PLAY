@@ -35,7 +35,7 @@ void setup()
 {
 	Serial.begin(9600);
 
-  startTime = millis();
+	startTime = millis();
 
 	// initialize inputs
 	pinMode(spoutBtn, INPUT_PULLUP);
@@ -43,7 +43,7 @@ void setup()
 	pinMode(spout, OUTPUT);
 }
 
-void loop() 
+void loop()
 {
 	// read pins
 	targetBtnSate = digitalRead(targetBtn);
@@ -52,14 +52,14 @@ void loop()
 	checkTarget();
 	checkSpout();
 
-  delay(debounce);
+	delay(debounce);
 }
 
 void checkTarget()
 {
 	if (targetBtnSate == LOW)
 	{
-    Serial.println("hit");
+		Serial.println("hit");
 		setTimeout();
 	}
 
@@ -73,9 +73,9 @@ void checkTarget()
 	}
 }
 
-void setTimeout() 
+void setTimeout()
 {
-  startTime = millis();
+	startTime = millis();
 }
 
 bool checkTimeout()
@@ -94,10 +94,11 @@ bool checkTimeout()
 	}
 }
 
-void checkSpout() {
+void checkSpout()
+{
 	if (spoutBtnSate == LOW)
 	{
-    Serial.println("please");
+		Serial.println("please");
 		if (isEnabled)
 		{
 			openSpout();
@@ -115,6 +116,7 @@ void openSpout()
 	digitalWrite(spout, HIGH);
 }
 
-void closeSpout() {
+void closeSpout()
+{
 	digitalWrite(spout, LOW);
 }
